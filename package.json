@@ -1,0 +1,20 @@
+{
+  "name": "advent_of_code_2019",
+  "version": "1.0.0",
+  "description": "My solutions for the https://adventofcode.com/ 2019 puzzles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mladmax/advent_of_code_2019.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mladmax/advent_of_code_2019/issues"
+  },
+  "homepage": "https://github.com/mladmax/advent_of_code_2019#readme"
+}
