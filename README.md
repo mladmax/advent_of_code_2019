@@ -1,2 +1,2 @@
-# advent_of_code_2019
-My solutions for the advent of code 2019 puzzles
+# Advent of code 2019
+My solutions for the https://adventofcode.com/ 2019 puzzles
