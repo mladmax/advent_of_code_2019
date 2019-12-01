@@ -4,7 +4,7 @@
   "description": "My solutions for the https://adventofcode.com/ 2019 puzzles",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "day1": "node src/day01"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/mladmax/advent_of_code_2019/issues"
   },
-  "homepage": "https://github.com/mladmax/advent_of_code_2019#readme"
+  "homepage": "https://github.com/mladmax/advent_of_code_2019#readme",
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1"
+  }
 }
