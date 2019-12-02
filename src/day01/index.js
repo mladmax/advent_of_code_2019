@@ -1,15 +1,15 @@
 const log = require('../utils/log')();
-const getInput = require('../utils/input');
+const input = require('../utils/input');
 
 const FuelCounterUpper = require('./FuelCounterUpper');
 
-const input = __dirname.split('/').pop();
+const day = __dirname.split('/').pop();
 
 try {
 	const fuelCounterUpper = new FuelCounterUpper();
 
 	log.info('loading modules');
-	const modules = getInput(input);
+	const modules = input.get(day);
 	log.success('modules loaded');
 
 	log.info('calculating fuel requirments');
