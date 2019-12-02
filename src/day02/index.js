@@ -1,14 +1,12 @@
 const log = require('../utils/log')();
 const getInput = require('../utils/input');
 
-const runIntcode = require('./intcode');
+const intcode = require('./intcode');
 
-const input = __dirname.split('/').pop();
+const day = __dirname.split('/').pop();
 
 try {
-	const opcode = getInput(input);
-	const res = runIntcode(opcode);
-	log.info(res);
+	log.success(`The result is ${intcode.run(getInput(day))[0]}`);
 } catch (error) {
-	log.error(error);
+	log.error(error.message);
 }

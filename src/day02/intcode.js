@@ -1,19 +1,26 @@
-const log = require('../utils/log')();
+const sequence = input => input.split(',').map((value, index) => (index === 1 ? 12 : index === 2 ? 2 : +value));
 
-const runOperations = sequence => {
-	for (let index = 0; index < sequence.length; index += 4) {
-		const operation = sequence[index];
+const instructions = sequence => {
+	const instructions = [];
+	while (sequence.length) {
+		instructions.push(sequence.splice(0, 4));
+	}
+	return instructions;
+};
 
-		const pos1 = sequence[index + 1];
-		const pos2 = sequence[index + 2];
-		const pos3 = sequence[index + 3];
+const compile = (sequence, instructions) => {
+	for (let instruction of instructions) {
+		const operation = instruction[0];
+		const first = instruction[1];
+		const second = instruction[2];
+		const result = instruction[3];
 
 		switch (operation) {
 			case 1:
-				sequence[pos3] = sequence[pos1] + sequence[pos2];
+				sequence[result] = sequence[first] + sequence[second];
 				break;
 			case 2:
-				sequence[pos3] = sequence[pos1] * sequence[pos2];
+				sequence[result] = sequence[first] * sequence[second];
 				break;
 			case 99:
 				return sequence;
@@ -23,13 +30,8 @@ const runOperations = sequence => {
 	}
 };
 
-const runIntcode = opcode => {
-	const sequence = opcode.split(',').map(n => +n);
+const run = input => compile(sequence(input), instructions([...sequence(input)]));
 
-	sequence[1] = 12;
-	sequence[2] = 2;
-
-	return runOperations(sequence)[0];
+module.exports = {
+	run,
 };
-
-module.exports = runIntcode;
