@@ -30,7 +30,7 @@ const compile = (sequence, instructions) => {
 	}
 };
 
-const run = (input, noun, verb) => compile(sequence(input, noun, verb), instructions([...sequence(input, noun, verb)]));
+const run = (input, noun, verb) => compile(sequence(input, noun, verb), instructions(sequence(input, noun, verb)));
 
 module.exports = {
 	run,
