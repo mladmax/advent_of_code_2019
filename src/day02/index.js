@@ -4,7 +4,7 @@ const numbers = require('../utils/numbers');
 
 const intcode = require('./intcode');
 
-const day = __dirname.split('\\').pop();
+const day = __dirname.split('/').pop();
 
 try {
 	log.success(`Result of part one is ${intcode.run(input.get(day), 12, 2)[0]}`);
