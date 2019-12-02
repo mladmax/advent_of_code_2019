@@ -1,4 +1,4 @@
-const sequence = input => input.split(',').map((value, index) => (index === 1 ? 12 : index === 2 ? 2 : +value));
+const sequence = (input, noun, verb) => input.split(',').map((value, index) => (index === 1 ? noun : index === 2 ? verb : +value));
 
 const instructions = sequence => {
 	const instructions = [];
@@ -30,7 +30,7 @@ const compile = (sequence, instructions) => {
 	}
 };
 
-const run = input => compile(sequence(input), instructions([...sequence(input)]));
+const run = (input, noun, verb) => compile(sequence(input, noun, verb), instructions([...sequence(input, noun, verb)]));
 
 module.exports = {
 	run,

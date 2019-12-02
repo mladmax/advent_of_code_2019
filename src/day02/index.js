@@ -6,7 +6,7 @@ const intcode = require('./intcode');
 const day = __dirname.split('/').pop();
 
 try {
-	log.success(`The result is ${intcode.run(getInput(day))[0]}`);
+	log.success(`Result of part one is ${intcode.run(getInput(day), 12, 2)[0]}`);
 } catch (error) {
 	log.error(error.message);
 }
