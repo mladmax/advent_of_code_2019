@@ -1,5 +1,3 @@
-const http = require('../utils/http');
-
 function FuelCounterUpper() {
 	const calculateFuel = mass => Math.floor(+mass / 3 - 2);
 
@@ -8,8 +6,6 @@ function FuelCounterUpper() {
 	const noNegative = mass => Math.max(+mass, 0);
 
 	const calculateActualFuel = mass => +mass && calculateActualFuel(noNegative(calculateFuel(mass))) + noNegative(calculateFuel(mass));
-
-	this.loadModules = modulesURL => http.get(modulesURL);
 
 	this.getFuel = modules =>
 		modules

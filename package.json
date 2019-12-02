@@ -4,7 +4,8 @@
   "description": "My solutions for the https://adventofcode.com/ 2019 puzzles",
   "main": "index.js",
   "scripts": {
-    "day1": "node src/day01"
+    "day01": "node src/day01",
+    "day02": "node src/day02"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,7 @@
     "url": "https://github.com/mladmax/advent_of_code_2019/issues"
   },
   "homepage": "https://github.com/mladmax/advent_of_code_2019#readme",
-  "dependencies": {
-    "axios": "^0.19.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
