@@ -1,6 +1,6 @@
 const OPERATIONS = {
 	ADD: 1,
-	MULTI: 2,
+	MULT: 2,
 	EXIT: 99,
 };
 
@@ -25,7 +25,7 @@ const compile = (sequence, instructions) => {
 			case OPERATIONS.ADD:
 				sequence[result] = sequence[first] + sequence[second];
 				break;
-			case OPERATIONS.MULTI:
+			case OPERATIONS.MULT:
 				sequence[result] = sequence[first] * sequence[second];
 				break;
 			case OPERATIONS.EXIT:
