@@ -1,3 +1,9 @@
+const OPERATIONS = {
+	ADD: 1,
+	MULTI: 2,
+	EXIT: 99,
+};
+
 const sequence = (input, noun, verb) => input.split(',').map((value, index) => (index === 1 ? noun : index === 2 ? verb : +value));
 
 const instructions = sequence => {
@@ -16,13 +22,13 @@ const compile = (sequence, instructions) => {
 		const result = instruction[3];
 
 		switch (operation) {
-			case 1:
+			case OPERATIONS.ADD:
 				sequence[result] = sequence[first] + sequence[second];
 				break;
-			case 2:
+			case OPERATIONS.MULTI:
 				sequence[result] = sequence[first] * sequence[second];
 				break;
-			case 99:
+			case OPERATIONS.EXIT:
 				return sequence;
 			default:
 				throw Error('Oops. Something went wrong!');
