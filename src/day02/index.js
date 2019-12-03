@@ -11,9 +11,9 @@ try {
 
 	log.success(`Result of part one is ${intcode.run(code, 12, 2)[0]}`);
 
-	numbers.combin2(0, 99).forEach(combination => {
-		if (intcode.run(code, combination[0], combination[1])[0] === 19690720) {
-			log.success(`Result of part two is ${100 * combination[0] + combination[1]}`);
+	numbers.combin2(0, 99).forEach(([noun, verb]) => {
+		if (intcode.run(code, noun, verb)[0] === 19690720) {
+			log.success(`Result of part two is ${100 * noun + verb}`);
 		}
 	});
 } catch (error) {
